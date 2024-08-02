@@ -90,9 +90,9 @@ function BannerScreen() {
                         shows?.map((show, index) => (
                             <div
                                 key={index}
-                                className="border-[3px] border-transparent w-56 h-[7.3rem] max-w relative transition duration-300 hover:border-[3px] hover:border-teal-400">
+                                className="border-[3px] border-transparent w-60 h-[8.3rem] max-w relative transition duration-300 hover:border-[3px] hover:border-teal-400">
                                 <img
-                                    className="max-w-56 max-h-28 w-full  " src={show?.image?.original} alt="Background Image" />
+                                    className="max-w-60 max-h-32 w-full  " src={show?.image?.original} alt="Background Image" />
                             </div>
                         ))
                     }
