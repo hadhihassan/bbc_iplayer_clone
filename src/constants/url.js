@@ -1,0 +1,6 @@
+export const baseUrl = "https://api.tvmaze.com";
+export const defaultImageUrl = "https://media.istockphoto.com/id/1396814518/vector/image-coming-soon-no-photo-no-thumbnail-image-available-vector-illustration.webp?s=1024x1024&w=is&k=20&c=qNeCdQEGR07rW2FnwvIuuMaVmy0HkHPxdpYeJxLi3UE="
+
+export const PlayUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAwUlEQVR4nO3WMWoCQBCF4Q8CwTSms7XQPhfICWxyi1zBNqVX8Aq2llYhhNSCN7BU0ohNIBmbXUiZQmeV+OCvf1hmZx7XNM47lnjKFscvPvDYQhyFOYYtxIEvTNHLFkdhhxfcZYujsMYzbrLFUVhh1EIchQUeWogD35ihny2Owh4T3GeLK1uMcZstrrz+G/Em+6nrcHX/IrzY77TIXiCr7JW5zj4Sn2VSO8cS1pxNEfgpkzo4lbCmWdl7a1Vvr3HsHACr5CJWnhywpwAAAABJRU5ErkJggg==";
+
+export const PlayList = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAlElEQVR4nO3VPQrCQBCA0em9jaWItUG8k0fT5CaJl7B6EtAihSFIduPPfvXCg5ldNqIUEWjMVzN5qDPDddlmjjFP37M0cF32PAgHXBOMukM1BvcHUtWOwUmLb4U3WOOcFY7h+WO/u+xwH1Y44ZYVfobdf8CWGLWclwvbx3O6TAXngt8uPhHulvokqkR4i/1LuPST3QHDfdIn4mCfEwAAAABJRU5ErkJggg=="
