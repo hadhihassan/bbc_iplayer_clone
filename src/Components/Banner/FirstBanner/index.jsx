@@ -76,7 +76,7 @@ function BannerScreen() {
                         </div>
                     </div>
                     <div className="w-[70%] h-[78vh] flex justify-center -z-40 absolute left-96 bg-black">
-                        <div className='bg-transparent w-full h-full dark-inner dark-inner '></div>
+                        <div className='w-full h-[78vh]  element'></div>
                         <img
                             className="inner-shadow  h-[78vh] w-full max-w-4xl rounded-lg -z-50 absolute"
                             style={{ boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.7)" }}

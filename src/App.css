@@ -56,9 +56,16 @@
 
 .inner-shadow {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7),
-        /* Outermost shadow */
         inset 0 0 5px rgba(0, 0, 0, 0.6),
         inset 0 0 3px rgba(0, 0, 0, 0.5),
         inset 0 0 2px rgba(0, 0, 0, 0.4);
-    /* Inner shadows */
+}
+
+.element {
+    width: 253px;
+    height: 250px;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: -6px -41px 36px 54px rgba(0,0,0,1) inset,
+    20px 0px 10px -20px rgba(0,0,0,1) inset;
 }
