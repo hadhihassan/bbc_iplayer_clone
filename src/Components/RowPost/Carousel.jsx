@@ -28,8 +28,8 @@ const CarouselContainer = styled.div`
 `;
 const SlideItem = styled.div`
     flex: 0 0 auto;
-    min-width: 260px; // Adjust based on your needs
-    margin-right: -312px; // Increased space between slides
+    min-width: 260px; 
+    margin-right: -312px; 
     box-sizing: border-box;
     border-color: green;
     background-color: #f8f9fa;
@@ -54,12 +54,8 @@ const Button = styled.button`
     padding:10px 10px 10px 10px 
 `;
 
-const NextButton = styled(Button)`
-  // No additional styling needed since it inherits from Button
-`;
-const PrevButton = styled(Button)`
-  // No additional styling needed since it inherits from Button
-`;
+const NextButton = styled(Button)``;
+const PrevButton = styled(Button)``;
 
 
 

@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import HorizontalCarousel from './Carousel'
-import {  getShows1 } from '../../api/apiService'
+import { getShows1 } from '../../api/apiService'
 import useHighResolutionImages from '../../hooks/useHighResulutionImage';
 import { defaultImageUrl } from '../../constants/url'
 
 export default function RowPost({ title, generes, bigPost }) {
     const [shows, setShows] = useState([]);
-    const { shows: newShows, error } = useHighResolutionImages(shows);
+    const { shows: newShows } = useHighResolutionImages(shows);
 
     const getAllShows = async () => {
         const data = await getShows1(generes);
@@ -27,7 +27,7 @@ export default function RowPost({ title, generes, bigPost }) {
             </div>
             <HorizontalCarousel >
                 {
-                    (bigPost ? shows : newShows)?.map((show,index) => (
+                    (bigPost ? shows : newShows)?.map((show, index) => (
                         <>
                             <div className={`${bigPost ? 'h-[40rem]' : 'h-[15rem]'} bg-black`}>
                                 <div
