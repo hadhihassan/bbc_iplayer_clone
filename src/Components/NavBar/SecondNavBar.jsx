@@ -1,13 +1,19 @@
 import { useState } from 'react';
+import CategoryDropDown from './CategoryDropDown';
+import ChannelsDropDown from './ChannelsDropDown';
 import { RiArrowDropDownFill } from "react-icons/ri";
 
 export default function SecondNavBar() {
 
-
     const [nav, setNav] = useState(false);
+    const [categoryOpen, setCategoryOpen] = useState(false)
+    const [channelOpen, setChannelOpen] = useState(false)
+
+
     const handleNav = () => {
         setNav(!nav);
     };
+
     const navItems = [
         { id: 1, text: 'Channels' },
         { id: 2, text: 'Categories' },
@@ -15,6 +21,13 @@ export default function SecondNavBar() {
         { id: 4, text: 'TV Guide' },
         { id: 5, text: 'Watchlist' },
     ];
+
+    const openCategoryDropDown = () => {
+        setCategoryOpen(!categoryOpen)
+    }
+    const openChannleDropDown = () => {
+        setChannelOpen(!channelOpen)
+    }
     return (
         <>
             <div className=' border-gray-800 py-8 flex justify-between items-center h-10 w-full border-b px-12 text-white '>
@@ -27,13 +40,19 @@ export default function SecondNavBar() {
 
                 {/* Desktop Navigation */}
                 <ul className='hidden md:flex  w-full text-[13px] font-semibold  md:justify-end md:items-center'>
-                    <li className='flex justify-center items-center cursor-pointer text-sm text-gray-200 text-inherit font-normal  text-pretty hover:text-rose-400 hover:bg-[#141414] py-3 px-2 text-center w-[94px]'>
+                    <li
+                        className='flex justify-center items-center cursor-pointer text-sm text-gray-200 text-inherit font-normal  text-pretty hover:text-rose-400 hover:bg-[#141414] py-3 px-2 text-center w-[94px]'
+                        onClick={openChannleDropDown}
+                    >
                         Channels
-                        <RiArrowDropDownFill color='white' size={38}/>
+                        <RiArrowDropDownFill color='white' size={38} />
                     </li>
-                    <li className='flex justify-center items-center cursor-pointer text-sm text-gray-200 text-inherit font-normal  text-pretty hover:text-rose-400 hover:bg-[#141414] py-3 px-2 text-center w-[94px]'>
+                    <li
+                        className='flex justify-center items-center cursor-pointer text-sm text-gray-200 text-inherit font-normal  text-pretty hover:text-rose-400 hover:bg-[#141414] py-3 px-2 text-center w-[94px]'
+                        onClick={openCategoryDropDown}
+                    >
                         Categories
-                        <RiArrowDropDownFill color='white' size={38}/>
+                        <RiArrowDropDownFill color='white' size={38} />
                     </li>
                     <li className=' cursor-pointer text-sm text-gray-200 text-inherit font-normal  text-pretty hover:text-rose-400 hover:bg-[#141414] h-full py-5 px-2 text-center w-[94px]'>
                         A-Z
@@ -70,6 +89,12 @@ export default function SecondNavBar() {
                     ))}
                 </ul>
             </div>
+            {
+                categoryOpen && <CategoryDropDown />
+            }
+            {
+                channelOpen && <ChannelsDropDown />
+            }
         </>
     )
 }
