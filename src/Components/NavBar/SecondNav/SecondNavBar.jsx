@@ -36,7 +36,7 @@ export default function SecondNavBar() {
         }
     }
 
-    
+
     return (
         <>
             <div className=' border-gray-800 py-8 flex justify-between items-center h-10 w-full border-b px-12 text-white '>
@@ -71,23 +71,7 @@ export default function SecondNavBar() {
                 <div onClick={handleNav} className='block md:hidden'>
                     Menu
                 </div>
-                <ul
-                    className={
-                        nav
-                            ? 'fixed md:hidden  left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'
-                            : 'ease-in-out   duration-500 fixed top-0 bottom-0 left-[-100%]'
-                    }
-                >
-                    <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>REACT.</h1>
-                    {navItems.map(item => (
-                        <li
-                            key={item.id}
-                            className='p-4 border-b rounded-xl hover:bg-[#00df9a] duration-300 hover:text-black cursor-pointer border-gray-600'
-                        >
-                            {item.text}
-                        </li>
-                    ))}
-                </ul>
+
             </div>
             {
                 categoryOpen && <CategoryDropDown />
@@ -95,6 +79,22 @@ export default function SecondNavBar() {
             {
                 channelOpen && <ChannelsDropDown />
             }
+            <ul
+                className={
+                    nav
+                        ? ' md:hidden w-full h-[10rem] border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'
+                        : 'ease-in-out   duration-500 fixed top-0 bottom-0 left-[-100%]'
+                }
+            >
+                {navItems.map(item => (
+                    <li
+                        key={item.id}
+                        className='p-4   duration-300  cursor-pointer'
+                    >
+                        {item.text}
+                    </li>
+                ))}
+            </ul>
         </>
     )
 }
