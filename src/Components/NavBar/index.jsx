@@ -1,5 +1,5 @@
-import TopSection from './FirstNavBar'
-import SecondSection from './SecondNavBar'
+import TopSection from './FirstNav/FirstNavBar'
+import SecondSection from './SecondNav/SecondNavBar'
 export default function NavBar() {
     return (
         <>

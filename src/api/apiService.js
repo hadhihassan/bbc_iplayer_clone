@@ -6,7 +6,7 @@ export const getShows = async (genre) => {
     return axios.get(`${SERACH_genres}${genre}`)
 }
 
-export const getShows1 = async (genre) => {
+export const searchShows = async (genre) => {
     return axios.get(`${SERACH}${genre}`)
 }
 

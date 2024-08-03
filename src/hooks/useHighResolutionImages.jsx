@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getImages } from '../api/apiService';
-
+import { toast } from 'react-hot-toast'
 const useHighResolutionImages = (initialShows) => {
     const [shows, setShows] = useState(initialShows);
     const [error, setError] = useState(null);
@@ -43,7 +43,7 @@ const useHighResolutionImages = (initialShows) => {
                 );
                 setShows(updatedShows);
             } catch (error) {
-                console.error('Error fetching images:', error);
+                toast.error(`Error fetching images: ${error.message}`)
                 setError(error);
             }
         };

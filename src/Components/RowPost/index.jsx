@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import HorizontalCarousel from './Carousel'
-import { getShows1 } from '../../api/apiService'
-import useHighResolutionImages from '../../hooks/useHighResulutionImage';
+import { searchShows } from '../../api/apiService'
+import useHighResolutionImages from '../../hooks/useHighResolutionImages';
 import { defaultImageUrl } from '../../constants/url'
 
 export default function RowPost({ title, generes, bigPost }) {
@@ -9,7 +9,7 @@ export default function RowPost({ title, generes, bigPost }) {
     const { shows: newShows } = useHighResolutionImages(shows);
 
     const getAllShows = async () => {
-        const data = await getShows1(generes);
+        const data = await searchShows(generes);
         if (data.data) {
             setShows(data.data.slice(0, 20));
         }

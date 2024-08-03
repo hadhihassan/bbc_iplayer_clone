@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import CategoryDropDown from './CategoryDropDown';
 import ChannelsDropDown from './ChannelsDropDown';
+import Logo from './Logo';
 import { RiArrowDropDownFill } from "react-icons/ri";
 
 export default function SecondNavBar() {
@@ -34,17 +35,14 @@ export default function SecondNavBar() {
             setCategoryOpen(!categoryOpen)
         }
     }
+
+    
     return (
         <>
             <div className=' border-gray-800 py-8 flex justify-between items-center h-10 w-full border-b px-12 text-white '>
-                {/* Logo */}
-                <div className='w-full flex justify-start items-center gap-5 text-[25px] font-bold text-[#00df9a] max-w-[289px]  '>
-                    <span className='text-[#ff4c98] text-4xl max-w-[148px] font-'>
-                        iPLAYER
-                    </span>
-                </div>
 
-                {/* Desktop Navigation */}
+                <Logo />
+
                 <ul className='hidden md:flex  w-full text-[13px] font-semibold  md:justify-end md:items-center'>
                     <li
                         className={`flex justify-center items-center cursor-pointer text-sm text-gray-200 text-inherit font-normal  text-pretty ${channelOpen && 'bg-[#141414]'} hover:text-rose-400  py-3 px-2 text-center w-[94px]`}
@@ -70,11 +68,9 @@ export default function SecondNavBar() {
                         Whatchlist
                     </li>
                 </ul>
-                {/* Mobile Navigation Icon */}
                 <div onClick={handleNav} className='block md:hidden'>
                     Menu
                 </div>
-                {/* Mobile Navigation Menu */}
                 <ul
                     className={
                         nav
@@ -82,9 +78,7 @@ export default function SecondNavBar() {
                             : 'ease-in-out   duration-500 fixed top-0 bottom-0 left-[-100%]'
                     }
                 >
-                    {/* Mobile Logo */}
                     <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>REACT.</h1>
-                    {/* Mobile Navigation*/}
                     {navItems.map(item => (
                         <li
                             key={item.id}

@@ -1,7 +1,7 @@
 import DOMPurify from 'dompurify';
-import { getShows1 } from "../../../api/apiService";
+import { searchShows } from "../../../api/apiService";
 import { useEffect, useState } from "react";
-import useHighResolutionImages from "../../../hooks/useHighResulutionImage";
+import useHighResolutionImages from "../../../hooks/useHighResolutionImages";
 import { PlayUrl } from '../../../constants/url'
 
 export default function SecondBanner() {
@@ -10,7 +10,7 @@ export default function SecondBanner() {
     const { shows: newShows } = useHighResolutionImages(shows);
     const sanitizedSummary = DOMPurify.sanitize(newShows[0]?.show.summary || '');
     const getAllShows = async () => {
-        const data = await getShows1("marvel");
+        const data = await searchShows("marvel");
         if (data.data) {
             setShows(data.data.slice(0, 1));
         }
@@ -18,6 +18,7 @@ export default function SecondBanner() {
     useEffect(() => {
         getAllShows();
     }, []);
+    
     return (
         <>
             <div className="px-12 w-full h-[58vh] mb-5 ">

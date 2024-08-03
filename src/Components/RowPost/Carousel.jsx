@@ -3,7 +3,6 @@ import { IoIosArrowBack } from "react-icons/io";
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-
 const CarouselWrapper = styled.div`
     position: relative;
     width: 100%; 
@@ -57,10 +56,6 @@ const Button = styled.button`
 const NextButton = styled(Button)``;
 const PrevButton = styled(Button)``;
 
-
-
-
-
 const HorizontalCarousel = ({ children }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -101,9 +96,5 @@ const HorizontalCarousel = ({ children }) => {
         </CarouselWrapper>
     );
 };
-
-
-
-
 
 export default HorizontalCarousel;
